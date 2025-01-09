@@ -596,8 +596,36 @@ body:where(.dark, .dark *) {
   left: 33.333333%;
 }
 
+.left-\[30\%\] {
+  left: 30%;
+}
+
+.left-\[28\%\] {
+  left: 28%;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-\[2px\] {
+  left: 2px;
+}
+
 .flex {
   display: flex;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .size-10 {
@@ -642,6 +670,42 @@ body:where(.dark, .dark *) {
   height: auto;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-5\/6 {
+  height: 83.333333%;
+}
+
+.h-\[70\%\] {
+  height: 70%;
+}
+
+.h-\[75\%\] {
+  height: 75%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[calc\(100\%-4px\)\] {
+  height: calc(100% - 4px);
+}
+
+.h-\[4\/5\] {
+  height: 4/5;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -672,6 +736,14 @@ body:where(.dark, .dark *) {
 
 .w-4\/5 {
   width: 80%;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .translate-y-1\/2 {
@@ -706,6 +778,21 @@ body:where(.dark, .dark *) {
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-\[55\%\] {
+  --tw-translate-x: -55%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[55\%\] {
+  --tw-translate-y: -55%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-\[45\%\] {
+  --tw-translate-x: -45%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -750,6 +837,18 @@ body:where(.dark, .dark *) {
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-1 {
@@ -856,6 +955,31 @@ body:where(.dark, .dark *) {
 
 .dark\:left-3\/4:where(.dark, .dark *) {
   left: 75%;
+}
+
+.dark\:left-\[72\%\]:where(.dark, .dark *) {
+  left: 72%;
+}
+
+.dark\:left-auto:where(.dark, .dark *) {
+  left: auto;
+}
+
+.dark\:right-1:where(.dark, .dark *) {
+  right: 0.25rem;
+}
+
+.dark\:left-\[calc\(100\%-2px\)\]:where(.dark, .dark *) {
+  left: calc(100% - 2px);
+}
+
+.dark\:left-\[calc\(100\%-0\.2rem\)\]:where(.dark, .dark *) {
+  left: calc(100% - 0.2rem);
+}
+
+.dark\:-translate-x-full:where(.dark, .dark *) {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .dark\:border-rose-100:where(.dark, .dark *) {

@@ -1,21 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-
-@layer base {
-  body {
-    @apply bg-rose-100 dark:bg-slate-800
-  }
-  :root {
-    --bg: theme(colors.rose.100);
-    --main: theme(colors.slate.800);
-  }
-  .dark {
-    --bg: theme(colors.slate.800);
-    --main: theme(colors.rose.100);
-  }
-}
 
 #root {
   top:0;

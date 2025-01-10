@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.tailwind.css'
+import './App.css'
 import { Outlet } from 'react-router-dom'
 import { Navbar } from './Navbar'
 

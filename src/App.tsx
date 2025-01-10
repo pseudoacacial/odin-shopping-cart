@@ -8,9 +8,8 @@ import { Navbar } from './Navbar'
 
 function App({children}:{children?:React.ReactNode}) {
 
-
   return (
-    <div className='bg-rose-100 text-slate-800 dark:bg-slate-800 dark:text-rose-100'>
+    <div className='bg-bg text-main'>
       <Navbar />
       {children ?? <Outlet></Outlet>}
     </div>

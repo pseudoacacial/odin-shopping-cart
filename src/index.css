@@ -6,6 +6,13 @@ html, body {
   margin: 0;
   height: 100%;
 }
+#root {
+  top:0;
+  position:absolute;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @layer base {
   body {
     @apply bg-rose-100 dark:bg-slate-800

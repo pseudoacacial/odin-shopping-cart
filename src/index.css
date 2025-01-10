@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
 }
 #root {
-  top:0;
-  position:absolute;
+  top: 0;
+  position: absolute;
   margin: 0 auto;
   text-align: center;
 }
 
 @layer base {
   body {
-    @apply bg-rose-100 dark:bg-slate-800
+    @apply bg-rose-100 dark:bg-slate-800;
+    color-scheme: light;
   }
   :root {
     --bg: theme(colors.rose.100);
@@ -24,6 +26,7 @@ html, body {
   .dark {
     --bg: theme(colors.slate.800);
     --main: theme(colors.rose.100);
+    color-scheme: dark;
   }
 }
 

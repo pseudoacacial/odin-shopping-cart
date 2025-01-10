@@ -1,24 +1,29 @@
-import { useState, useEffect } from 'react'
-import { ProductCard, product } from './ProductCard'
-import useSWR , {Fetcher} from 'swr'
+import { useState, useEffect } from "react"
+import { ProductCard, product } from "./ProductCard"
+import useSWR, { Fetcher } from "swr"
+import { useOutletContext } from "react-router-dom"
 
 export const Shop = () => {
+  const fetcher: Fetcher<product[], string> = (url) => {
+    console.log("fetching products")
+    return fetch(url).then((res) => res.json())
+  }
 
-  const [products, setProducts] = useState<product[]>([])
-  const [loading, setLoading] = useState(true)
+  const { data, error, isLoading } = useSWR(
+    "https://fakestoreapi.com/products",
+    fetcher
+  )
 
-  const fetcher: Fetcher<product[], string> = (url) => fetch(url).then(res=>res.json())
-  
+  const handleAddToCart =
+    useOutletContext<(product: product, amount: number) => void>()
 
-  const {data, error, isLoading } = useSWR('https://fakestoreapi.com/products' ,fetcher)
-
-  useEffect(()=>{
-  },[data])
-  if (error) return "An error has occurred.";
-  if (isLoading) return "Loading...";
+  if (error) return "An error has occurred."
+  if (isLoading) return "Loading..."
   return (
-    <div>
-      {data?.map(x=><ProductCard product={x} />)}
+    <div className="flex flex-wrap gap-4">
+      {data?.map((x) => (
+        <ProductCard key={x.id} product={x} handleAddToCart={handleAddToCart} />
+      ))}
     </div>
   )
 }
